@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+* {
+  font-family: "Anta", sans-serif;
+}
+body {
+  background-color: #2e5594;
+  color: #fff;
+}
+
+input {
+  background-color: #18448c;
+  padding: 10px;
+  border: none;
+  text-align: center;
+  border-radius: 7px;
+  letter-spacing: 2px;
+  color: #FFF;
+  width: 30em;
+  border-radius: 5px;
+}
+
+#searchbar {
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: #bdbdbd;
+}
+
+input:hover {
+  width: 30em;
+}
+
+.gxmes {
+  align-items: center;
+}
+
+.card {
+  background-color: #2354a4;
+  width: 8em;
+  border: 2px solid #17325e;
+  border-radius: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: 0.25s;
+}
+.card img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+.gameslist {
+  display: flex;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  background: #7aa2ff;
+  cursor: pointer;
+}
+
+select {
+  background-color: #18448c;
+  transition: 0.2s;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+}
+
+select:hover{
+  cursor: pointer;
+}
+
+option {
+  background-color: #335995;
+}
+
+option:hover {
+  background-color: #18448c;
+  cursor: pointer;
+}

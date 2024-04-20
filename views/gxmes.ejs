@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Games | <%= title %></title>
+    <link rel="stylesheet" href="./css/gxmes.css">
+</head>
+<%- include("partials/navbar") %>
+<body>
+    <center style="margin-top: 10%">
+      <div style="display: flex; justify-content: center;">
+        <input placeholder="Search..." id="searchbar" type="text" onkeyup="search();" style="margin-left: 5px; margin-right: 5px;">
+        <select id="filter" name="filter" onchange="filterGames()">
+          <option value="all">All Games</option>
+          <option value="HTML5">Local Games</option>
+          <option value="PR0XY">PR0XY Games</option>
+        </select>
+      </div>
+      <br/>
+      <div class="gameslist" id="gameslistlol">
+          <div class="card HTML5">
+            <img src="./img/gxmes/1v1.lol.png">
+            <p>1v1.lol</p>
+          </div>
+          <div class="card HTML5">
+            <img src="./img/eaglercraft.jpeg">
+            <p>Eaglercraft</p>
+          </div>
+          <div class="card PR0XY">
+            <img src="./img/roblox.jpeg">
+            <p>Roblox</p>
+          </div>
+      </div>
+    </center>
+  <script>
+    function search() {
+      var input, list, btn, p, i;
+      input = document.getElementById("searchbar").value;
+      list = document.getElementById("gameslistlol");
+      btn = list.getElementsByClassName("card");
+
+      var filter = document.getElementById("filter").value;
+
+      for (i = 0; i < btn.length; i++) {
+        p = btn[i].getElementsByTagName("p")[0];
+        if ((p.innerHTML.toUpperCase().indexOf(input.toUpperCase()) > -1) && (filter === "all" || btn[i].classList.contains(filter))) {
+          btn[i].style.display = "";
+        } else {
+          btn[i].style.display = "none";
+        }
+      }
+    }
+
+    function filterGames() {
+      var filter = document.getElementById("filter").value;
+      var cards = document.getElementsByClassName("card");
+
+      var input = document.getElementById("searchbar").value.toUpperCase();
+
+      for (var i = 0; i < cards.length; i++) {
+        var p = cards[i].getElementsByTagName("p")[0];
+        if ((p.innerHTML.toUpperCase().indexOf(input) > -1) && (filter === "all" || cards[i].classList.contains(filter))) {
+          cards[i].style.display = "";
+        } else {
+          cards[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

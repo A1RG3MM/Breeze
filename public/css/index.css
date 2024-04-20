@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+* {
+  font-family: "Anta", sans-serif;
+}
+body {
+  background-color: #2e5594;
+  color: #fff;
+}
+.panel {
+  background-color: #203D6D;
+  padding: 20px;
+  height: auto;
+  border-radius: 12px;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 30em;
+}
+.card {
+  padding: 5px;
+  background-color: #325FA8;
+  width: 20em;
+  height: 2em;
+  border-radius: 12px;
+  border: 2px solid #3E5A86;
+  margin-right: 5px;
+  margin-left: 5px;
+  transition: 0.25s;
+}
+.card img {
+  border-radius: 10px;
+  width: 32px;
+}
+input {
+  background-color: #4362A8;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  color: #FFF;
+  text-align: center;
+  width: 18em;
+  transition: 0.3s;
+}
+input::placeholder {
+  color: #FFFFFF;
+}
+input:focus {
+  width: 23em;
+}
+button {
+  padding: 12px;
+  background-color: #2A478A;
+  width: 4em;
+  height: 36px;
+  border: 1px ;
+  border-radius: 0px 7px 7px 0px;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  background: #7aa2ff;
+  cursor: pointer;
+}
+
+.displayclock {
+  background-color: #203D6D;
+  width: 9em;
+  padding: 3px;
+  border-radius: 12px;
+}
